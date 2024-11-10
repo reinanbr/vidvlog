@@ -1,5 +1,6 @@
 from moviepy.editor import *
 import moviepy.editor as mp
+from PIL import Image, ImageDraw, ImageFont
 import os
 
 from moviepy.config import change_settings
