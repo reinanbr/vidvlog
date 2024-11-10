@@ -14,19 +14,19 @@ os.environ["IMAGEMAGICK_BINARY"] = "/usr/bin/convert"  # Adjust path if needed
 fundo_imagem = 'bg.jpg'
 foto_pessoa = 'image.jpg'
 musica = 'music.mp3'
-nome_pessoa = 'João da Silva'
-caminho_fonte = 'akira.otf'  # Caminho para a fonte no diretório
+nome_pessoa = 'Jo da Silva'
+caminho_fonte = 'buller.otf'  # Caminho para a fonte no diretório
 
 # Criar o clip de fundo
 fundo = ImageClip(fundo_imagem)
-fundo = fundo.resize((1920, 1080))  # Ajusta para resolução de vídeo
+fundo = fundo.resize((800, 900))  # Ajusta para resolução de vídeo
 
 # Criar o clip da foto da pessoa
 foto = ImageClip(foto_pessoa)
-foto = foto.resize((300, 300)).set_position(('center', 'center')).set_duration(5)
+foto = foto.resize((600, 600)).set_position(('center', 'center')).set_duration(5)
 
 # Criar o texto com o nome da pessoa e fundo branco
-texto_nome = TextClip(nome_pessoa, fontsize=70, font=caminho_fonte, color='black', bg_color='white', size=(1920, 100))
+texto_nome = TextClip(nome_pessoa, fontsize=70, font=caminho_fonte, color='black', bg_color='white', size=(800, 90))
 texto_nome = texto_nome.set_position(('right', 'top'), relative=True).set_duration(5)
 
 # Carregar a música de fundo
