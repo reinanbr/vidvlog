@@ -13,6 +13,7 @@ opencv-python = "^4.10.0.84"
 pylint = "^3.3.1"
 requests = "^2.32.3"
 beautifulsoup4 = "^4.12.3"
+jedi = "^0.19.2"
 
 
 [build-system]
