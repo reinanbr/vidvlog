@@ -304,6 +304,19 @@ qa = ["flake8 (==5.0.4)", "mypy (==0.971)", "types-setuptools (==67.2.0.1)"]
 testing = ["Django", "attrs", "colorama", "docopt", "pytest (<9.0.0)"]
 
 [[package]]
+name = "kitano"
+version = "0.0.8.5"
+description = "Library for development and works in python3.9+"
+optional = false
+python-versions = "*"
+files = [
+    {file = "kitano-0.0.8.5-py3-none-any.whl", hash = "sha256:77c8f1a650af5a345c38a909b05d59118cafd198df44f3be9863f5bbb77840f8"},
+]
+
+[package.dependencies]
+colorama = "*"
+
+[[package]]
 name = "mccabe"
 version = "0.7.0"
 description = "McCabe checker, plugin for flake8"
@@ -700,4 +713,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "cca3e03526c20d8f5dafc0eb7d2c5e46c6e17bd95018468d215fb22c58bc20b5"
+content-hash = "7f7f7f5b858512565bc77fe9ce48e8386318c10285489d63d67f57b5d5cfc011"

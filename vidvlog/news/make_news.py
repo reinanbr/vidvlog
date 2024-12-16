@@ -1,6 +1,6 @@
-from news import criar_imagem_noticia as cin
-from video_news import create_video_news as cvn
-from make_voice import create_audio_voice as cav 
+from vidvlog.news.news import criar_imagem_noticia as cin
+from vidvlog.news.video_news import create_video_news as cvn
+from vidvlog.news.make_voice import create_audio_voice as cav 
 #from dotenv import load_dotenv
 #import os
 
@@ -8,10 +8,13 @@ from make_voice import create_audio_voice as cav
 def create_news(file_news,
                 title,
                 text,
+                font,
                 path_bg,
                 path_img,
                 path_song,
-                json_eleven
+                json_eleven,
+                time_add=5,
+                volumex=0.2
                 ):
 
     api_key, voice_id = json_eleven['api_eleven'],json_eleven['voice_id']
@@ -20,8 +23,8 @@ def create_news(file_news,
                      api_key=api_key,
                      voice_id=voice_id)
     
-    img_news = cin(title,text,path_bg,path_img,'news.png')
-    video_news = cvn(file_news,img_news,voice_path,path_song)
+    img_news = cin(title,text,font,path_bg,path_img,'news.png')
+    video_news = cvn(file_news,img_news,voice_path,path_song,time_add=time_add,volumex=volumex)
     
     return video_news
 

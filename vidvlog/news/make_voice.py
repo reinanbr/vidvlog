@@ -8,8 +8,8 @@ def create_audio_voice(text,file_audio,
    text = ' '.join(text.split("\n"))
     # Configurações
    CHUNK_SIZE = 1024
-   api_key = 'sk_6d223452ee732508dd444cf2c32f556164ea5fa7422605fd'
-   voice_id = 'bIHbv24MWmeRgasZH58o'
+   api_key = api_key
+   voice_id = voice_id
    #text = "Tipo, é louco saber que as coisas que constituem a matéria, são tão, foluvéis.."
    
    # Endpoint da API para geração de voz

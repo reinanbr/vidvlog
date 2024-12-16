@@ -1,10 +1,12 @@
 from PIL import Image, ImageDraw, ImageFont
 
-def criar_imagem_noticia(titulo, noticia, caminho_fundo, caminho_imagem, saida):
+def criar_imagem_noticia(titulo, noticia,font, caminho_fundo, caminho_imagem, saida):
     # Abrir a imagem de fundo
     imagem_final = Image.open(caminho_fundo).convert("RGB")
     imagem_final = imagem_final.resize((900,1600))
     largura, altura = imagem_final.size
+
+    count_line = len(noticia.split("\n"))
 
     # Configurações de texto
     cor_texto = (0, 0, 0)  # Preto
@@ -14,8 +16,8 @@ def criar_imagem_noticia(titulo, noticia, caminho_fundo, caminho_imagem, saida):
     # Fonte para o título e notícia
     try:
         print('peguei aqui')
-        fonte_titulo = ImageFont.truetype("quiva.ttf", 60)
-        fonte_noticia = ImageFont.truetype("quiva.ttf", 30)
+        fonte_titulo = ImageFont.truetype(font, 60)
+        fonte_noticia = ImageFont.truetype(font, 30)
     except:
         fonte_titulo = ImageFont.load_default()
         fonte_noticia = ImageFont.load_default()
@@ -56,7 +58,7 @@ def criar_imagem_noticia(titulo, noticia, caminho_fundo, caminho_imagem, saida):
     mascara = imagem_central.split()[3]  # Canal alpha
 
     # Posicionar a imagem central
-    posicao_central = ((largura - nova_largura) // 2, (altura - nova_altura) // 2)
+    posicao_central = ((largura - nova_largura) // 2, (altura - nova_altura) // 2 + count_line*10)
     imagem_final.paste(imagem_central, posicao_central, mask=mascara)
 
     # Salvar a imagem final
