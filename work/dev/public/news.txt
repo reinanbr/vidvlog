@@ -1,0 +1,14 @@
+ 
+Mundo depende do COBOL e pouquíssimos
+ desenvolvedores conhecem a linguagem; IBM afirmou 
+ter solução, mas não tinha.
+Mesmo com assistência de IA, a IBM ainda precisa
+ de um programador. Segundo um relatório do IJARSCT, 
+quase metade dos sistemas bancários possuem alguma 
+desta linguagem, o que significa que quase todas as 
+transações realizadas diariamente continuam a depender, 
+em maior ou menor grau, desta linguagem de programação,
+desconhecida  por muitos. Relativamente à IA que prometia
+ser uma solução para este problema, a IBM admitiu que 
+atecnologia é nova e não comprovada, mas continua otimista 
+quanto ao seu futuro. (Fonte: IGN)
